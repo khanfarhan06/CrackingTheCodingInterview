@@ -45,9 +45,13 @@ public class Question2_1 {
             while(ptr!=null){
                 if(ptr.data==pivot.data){
                     previous.next = ptr.next;
-                    
+                    ptr = ptr.next;
+                }else{
+                    previous = ptr;
+                    ptr = ptr.next;
                 }
             }
+            pivot = pivot.next;
         }
     }
 
@@ -73,7 +77,7 @@ public class Question2_1 {
         Node fifth = new Node(1);
         fifth.next = null;
 
-        removeDuplicates(head);
+        removeDuplicatesWithoutBuffer(head);
 
         printList(head);
     }
