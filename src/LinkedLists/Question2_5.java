@@ -5,12 +5,13 @@ package LinkedLists;
 //EXAMPLE:      Input: A -> B -> C -> D -> E -> C [the same C as earlier]
 //              Output: C
 
-
+//TODO: Add approach details
 import java.util.HashSet;
 import java.util.Set;
 
 public class Question2_5 {
 
+    //TODO: Add comments on working of findLoopNodeWithExtraSpace method
     private static Node findLoopNodeWithExtraSpace(Node head) {
         Set<Node> found = new HashSet<>();
         Node ptr = head;
@@ -23,6 +24,7 @@ public class Question2_5 {
         return null;
     }
 
+    //TODO: Add comments on working of findLoopNodeWithoutExtraSpace method
     private static Node findLoopNodeWithoutExtraSpace(Node head){
         Node slow = head;
         Node fast = head;
